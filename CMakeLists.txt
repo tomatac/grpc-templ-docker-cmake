@@ -9,7 +9,8 @@ if(EXISTS "${LOC_PATH}")
     message(FATAL_ERROR "You cannot build in a source directory (or any directory with a CMakeLists.txt file). Please make a build subdirectory. Feel free to remove CMakeCache.txt and CMakeFiles.")
 endif()
 
-# This maybe included if gRPC is not installed system wide
+# This maybe used if gRPC is not installed system wide
+# gRPC is downloaded and built within a subfolder of current project
 #include(FetchContent)
 #FetchContent_Declare(
 #  gRPC
@@ -24,7 +25,5 @@ set(CMAKE_BUILD_TYPE Debug)
 
 add_subdirectory(protos)
 add_subdirectory(src)
-
-set(DEST_DIR "${CMAKE_SOURCE_DIR}")
 
 
