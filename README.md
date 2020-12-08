@@ -2,11 +2,11 @@ grpc-templ-docker-cmake
 =======================
 
 ## A gRPC C++ Template Project using VS Code, Building in a Docker Container Development Environment with modern CMake
-----------------------------------------------------------
+-----------------------
 
-This project can be used as a template to build gRPC applications within a Docker container using VS Code
+This project can be used as a template to build **gRPC applications** within a **Docker container** using **VS Code**
 
-It is using modern CMake to build 2 sample applications: *greeter_server* and *greeter_client*. 
+It is using **modern CMake** to build 2 sample applications: *greeter_server* and *greeter_client*. 
 
 There is nothing special about the C++ gRPC application. It is a copy of a very simple example provided by Google.
 
@@ -39,14 +39,15 @@ I found this CMake article interesting describing [CMake: dependencies between t
 - watch the VS Code messages on the lower right hand side of the screen. Because this project include a "*.devcontainer*" folder VS code recognize it as a container based development environment. A message should pop up asking to “*Reopen folder to develop in a container*”. Select “**Reopen in Container**”
 - VS Code will reopen and start to build the container based on the *Dockerfile* from *.devcontainer* folder.
 - Another message should pop up on lower right hand side of the screen giving the opportunity to **Show Log** as the container is getting built
-- in a terminal in VS Code
+- go to the VS Code terminal and build the application
+    - note the current folder */workspaces/grpc-templ-docker-cmake*. This is the default [bind mount](https://docs.docker.com/storage/bind-mounts/) of the VS Code project folder into the local file system of the container. You can see here the same files as in the project folder.
     - `cd build`
 	- `cmake ..`
 	- `make`
-- open a new terminal in VS Code
+- open a new terminal in VS Code to test the server application
 	- `cd build/src/`
 	- `./greeter_server`
-- open a new terminal in VS Code
+- open a new terminal in VS Code to test the client application
 	- `cd build/src/`
 	- `./greeter_client`
 
