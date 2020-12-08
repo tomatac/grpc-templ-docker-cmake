@@ -34,21 +34,21 @@ I found this CMake article interesting describing [CMake: dependencies between t
 - install [Docker](https://docs.docker.com/get-docker/)
 - install [VS Code](https://code.visualstudio.com/download)
 - install [Remote Development VS Code extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
-- git clone https://github.com/tomatac/grpc-templ-docker-cmake.git
+- `git clone https://github.com/tomatac/grpc-templ-docker-cmake.git`
 - open the project folder in VS Code
 - watch the VS Code messages on the lower right hand side of the screen. Because this project include a "*.devcontainer*" folder VS code recognize it as a container based development environment. A message should pop up asking to “*Reopen folder to develop in a container*”. Select “**Reopen in Container**”
 - VS Code will reopen and start to build the container based on the *Dockerfile* from *.devcontainer* folder.
 - Another message should pop up on lower right hand side of the screen giving the opportunity to **Show Log** as the container is getting built
 - in a terminal in VS Code
-    - cd build
-	- cmake ..
-	- make
+    - `cd build`
+	- `cmake ..`
+	- `make`
 - open a new terminal in VS Code
-	- cd build/src/
-	- ./greeter_server
+	- `cd build/src/`
+	- `./greeter_server`
 - open a new terminal in VS Code
-	- cd build/src/
-	- ./greeter_client
+	- `cd build/src/`
+	- `./greeter_client`
 
 I welcome comments and improvements ideas to this project.
  
